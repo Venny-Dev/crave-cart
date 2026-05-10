@@ -29,8 +29,8 @@ function PauseToggle() {
 export default function VendorSettings() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Top Bar */}
-      <header className="sticky top-0 z-40 bg-surface/80 backdrop-blur-xl shadow-sm shadow-orange-900/5 flex justify-between items-center px-6 py-4">
+      {/* Top Bar — hidden on mobile (replaced by sidebar's top bar) */}
+      <header className="hidden lg:flex sticky top-0 z-40 bg-surface/80 backdrop-blur-xl shadow-sm shadow-orange-900/5 justify-between items-center px-6 py-4">
         <span className="text-2xl font-extrabold text-primary tracking-tight font-headline">
           The Gastronomic Gallery
         </span>
@@ -53,7 +53,7 @@ export default function VendorSettings() {
       </header>
 
       {/* Content */}
-      <main className="flex-1 p-8 bg-surface-container-low">
+      <main className="flex-1 p-4 md:p-8 bg-surface-container-low">
         <div className="max-w-5xl mx-auto space-y-8">
           {/* Page Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">

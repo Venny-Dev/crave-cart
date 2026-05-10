@@ -56,8 +56,8 @@ const desserts = [
 export default function VendorMenu() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Top Bar */}
-      <header className="sticky top-0 z-40 bg-surface/80 backdrop-blur-xl shadow-sm shadow-orange-900/5 flex justify-between items-center px-6 py-4">
+      {/* Top Bar — hidden on mobile (replaced by sidebar's top bar) */}
+      <header className="hidden lg:flex sticky top-0 z-40 bg-surface/80 backdrop-blur-xl shadow-sm shadow-orange-900/5 justify-between items-center px-6 py-4">
         <span className="text-2xl font-extrabold text-primary tracking-tight font-headline">
           The Gastronomic Gallery
         </span>
@@ -81,27 +81,27 @@ export default function VendorMenu() {
       </header>
 
       {/* Content */}
-      <div className="p-10 space-y-12 flex-1">
+      <div className="p-4 md:p-10 space-y-12 flex-1">
         {/* Page Header */}
-        <section className="flex justify-between items-end">
+        <section className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4">
           <div className="space-y-1">
-            <h1 className="text-4xl font-extrabold font-headline text-on-surface tracking-tight">
+            <h1 className="text-3xl md:text-4xl font-extrabold font-headline text-on-surface tracking-tight">
               Menu Management
             </h1>
             <p className="text-on-surface-variant">Curate and refine your culinary gallery.</p>
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-3">
             <div className="relative">
               <input
                 type="text"
                 placeholder="Search dish name..."
-                className="bg-surface-container-low border-none rounded-full px-6 py-3 pl-12 focus:outline-none focus:ring-2 focus:ring-primary/20 w-80 text-sm placeholder:text-outline text-on-surface"
+                className="bg-surface-container-low border-none rounded-full px-6 py-3 pl-12 focus:outline-none focus:ring-2 focus:ring-primary/20 w-full sm:w-64 text-sm placeholder:text-outline text-on-surface"
               />
               <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">
                 search
               </span>
             </div>
-            <button className="bg-primary hover:bg-primary-dim text-on-primary px-8 py-3 rounded-full font-bold flex items-center gap-2 transition-all active:scale-95">
+            <button className="bg-primary hover:bg-primary-dim text-on-primary px-8 py-3 rounded-full font-bold flex items-center justify-center gap-2 transition-all active:scale-95">
               <span className="material-symbols-outlined">add</span>
               Add Item
             </button>

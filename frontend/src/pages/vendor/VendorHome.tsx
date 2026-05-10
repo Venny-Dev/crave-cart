@@ -1,8 +1,8 @@
 export default function VendorHome() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Top Bar */}
-      <header className="sticky top-0 z-40 bg-surface/80 backdrop-blur-xl shadow-sm shadow-orange-900/5 flex justify-between items-center px-6 py-4">
+      {/* Top Bar — hidden on mobile (replaced by sidebar's top bar) */}
+      <header className="hidden lg:flex sticky top-0 z-40 bg-surface/80 backdrop-blur-xl shadow-sm shadow-orange-900/5 justify-between items-center px-6 py-4">
         <span className="text-2xl font-extrabold text-primary tracking-tight font-headline">
           The Gastronomic Gallery
         </span>
@@ -27,9 +27,9 @@ export default function VendorHome() {
       </header>
 
       {/* Content */}
-      <div className="p-8 space-y-8 flex-1">
+      <div className="p-4 md:p-8 space-y-8 flex-1">
         {/* Welcome */}
-        <section className="flex justify-between items-end">
+        <section className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4">
           <div>
             <h2 className="text-3xl font-extrabold text-on-surface tracking-tight font-headline">
               Welcome back, Chef

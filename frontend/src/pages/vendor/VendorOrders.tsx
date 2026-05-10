@@ -26,8 +26,8 @@ const activeOrders = [
 export default function VendorOrders() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Top Bar */}
-      <header className="sticky top-0 z-40 bg-surface/80 backdrop-blur-xl shadow-sm shadow-orange-900/5 flex justify-between items-center px-6 py-4">
+      {/* Top Bar — hidden on mobile (replaced by sidebar's top bar) */}
+      <header className="hidden lg:flex sticky top-0 z-40 bg-surface/80 backdrop-blur-xl shadow-sm shadow-orange-900/5 justify-between items-center px-6 py-4">
         <span className="text-2xl font-extrabold text-primary tracking-tight font-headline">
           The Gastronomic Gallery
         </span>
@@ -52,16 +52,16 @@ export default function VendorOrders() {
       </header>
 
       {/* Content */}
-      <section className="p-8 max-w-7xl mx-auto w-full flex-1">
+      <section className="p-4 md:p-8 max-w-7xl mx-auto w-full flex-1">
         {/* Page Header */}
-        <div className="flex justify-between items-end mb-8">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 mb-8">
           <div>
-            <h2 className="text-4xl font-extrabold text-on-surface font-headline tracking-tight mb-2">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-on-surface font-headline tracking-tight mb-2">
               Order Queue
             </h2>
             <p className="text-on-surface-variant">Manage incoming requests and active kitchen tasks.</p>
           </div>
-          <div className="bg-surface-container-low p-1.5 rounded-full flex gap-1">
+          <div className="bg-surface-container-low p-1.5 rounded-full flex gap-1 self-start sm:self-auto">
             <button className="px-6 py-2.5 rounded-full bg-white dark:bg-zinc-900 text-primary font-bold shadow-sm text-sm transition-all duration-200">
               New (3)
             </button>
@@ -125,7 +125,7 @@ export default function VendorOrders() {
                 )}
 
                 <div className="flex gap-4">
-                  <button className="flex-1 py-4 bg-gradient-to-br from-primary to-primary-fixed text-white rounded-full font-bold text-sm shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2">
+                  <button className="flex-1 py-4 bg-linear-to-br from-primary to-primary-fixed text-white rounded-full font-bold text-sm shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2">
                     <span className="material-symbols-outlined">check_circle</span>
                     Accept Order
                   </button>
@@ -188,7 +188,7 @@ export default function VendorOrders() {
 
       {/* FAB */}
       <div className="fixed bottom-10 right-10">
-        <button className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary-fixed text-white shadow-2xl flex items-center justify-center hover:rotate-90 transition-transform duration-300">
+        <button className="w-16 h-16 rounded-full bg-linear-to-br from-primary to-primary-fixed text-white shadow-2xl flex items-center justify-center hover:rotate-90 transition-transform duration-300">
           <span className="material-symbols-outlined text-3xl">add</span>
         </button>
       </div>
