@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand color tokens */
+  --color-primary: #b63816;
+  --color-primary-fixed: #ff7855;
+  --color-primary-fixed-dim: #f56540;
+  --color-primary-dim: #a52c0a;
+  --color-primary-container: #ff7855;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #000000;
+  --color-on-primary-fixed-variant: #591000;
+  --color-on-primary-container: #490b00;
+  --color-inverse-primary: #fc6a45;
+
+  --color-secondary: #9a511e;
+  --color-secondary-fixed: #ffc5a5;
+  --color-secondary-fixed-dim: #ffb285;
+  --color-secondary-dim: #8b4513;
+  --color-secondary-container: #ffc5a5;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-fixed: #582500;
+  --color-on-secondary-fixed-variant: #813e0b;
+  --color-on-secondary-container: #763502;
+
+  --color-tertiary: #b5373a;
+  --color-tertiary-fixed: #ff928e;
+  --color-tertiary-fixed-dim: #ff7a78;
+  --color-tertiary-dim: #a42b2f;
+  --color-tertiary-container: #ff928e;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed: #3a0005;
+  --color-on-tertiary-fixed-variant: #780514;
+  --color-on-tertiary-container: #69000e;
+
+  --color-surface: #fffbff;
+  --color-surface-bright: #fffbff;
+  --color-surface-dim: #e6e2da;
+  --color-surface-variant: #ebe8e0;
+  --color-surface-tint: #b63816;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fdf9f2;
+  --color-surface-container: #f7f3ec;
+  --color-surface-container-high: #f1ede6;
+  --color-surface-container-highest: #ebe8e0;
+  --color-on-surface: #393834;
+  --color-on-surface-variant: #666460;
+  --color-inverse-surface: #0f0e0b;
+  --color-inverse-on-surface: #9f9d97;
+
+  --color-background: #fffbff;
+  --color-on-background: #393834;
+
+  --color-outline: #82807b;
+  --color-outline-variant: #bcb9b3;
+
+  --color-error: #c12048;
+  --color-error-dim: #a70138;
+  --color-error-container: #f74b6d;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #510017;
+
+  /* Typography */
+  --font-headline: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Be Vietnam Pro', sans-serif;
+  --font-label: 'Be Vietnam Pro', sans-serif;
+
+  /* Border radius */
+  --radius: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+}
+
+/* ── Dark mode overrides ───────────────────────────────────────── */
+.dark {
+  --color-primary: #F2633E;
+  --color-primary-fixed: #F2633E;
+  --color-primary-fixed-dim: #d9522e;
+  --color-primary-dim: #c44525;
+  --color-primary-container: #3a1a10;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #ffb49a;
+
+  --color-secondary: #A8A29E;
+  --color-secondary-fixed: #57534e;
+  --color-secondary-fixed-dim: #44403c;
+  --color-secondary-container: #292524;
+  --color-on-secondary: #1c1917;
+  --color-on-secondary-container: #d6d3d1;
+
+  --color-tertiary: #a1a1aa;
+  --color-tertiary-container: #27272A;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #d4d4d8;
+
+  --color-surface: #1c1917;
+  --color-surface-bright: #292524;
+  --color-surface-dim: #0c0a09;
+  --color-surface-variant: #292524;
+  --color-surface-container-lowest: #0c0a09;
+  --color-surface-container-low: #1c1917;
+  --color-surface-container: #231f1e;
+  --color-surface-container-high: #27272A;
+  --color-surface-container-highest: #2e2b2a;
+  --color-on-surface: #e7e5e4;
+  --color-on-surface-variant: #a8a29e;
+  --color-inverse-surface: #e7e5e4;
+  --color-inverse-on-surface: #1c1917;
+
+  --color-background: #1c1917;
+  --color-on-background: #e7e5e4;
+
+  --color-outline: #57534e;
+  --color-outline-variant: #292524;
+
+  --color-error: #f87171;
+  --color-error-container: #7f1d1d;
+  --color-on-error: #1c1917;
+  --color-on-error-container: #fca5a5;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Scrollbar utility */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-headline);
+}
